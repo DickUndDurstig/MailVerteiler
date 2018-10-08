@@ -1,0 +1,9 @@
+c:\users\nicot_000\documents\visual studio 2015\Projects\MailVerteiler\MailVerteiler\bin\Debug\MailVerteiler.exe.config
+c:\users\nicot_000\documents\visual studio 2015\Projects\MailVerteiler\MailVerteiler\bin\Debug\MailVerteiler.exe
+c:\users\nicot_000\documents\visual studio 2015\Projects\MailVerteiler\MailVerteiler\bin\Debug\MailVerteiler.pdb
+c:\users\nicot_000\documents\visual studio 2015\Projects\MailVerteiler\MailVerteiler\obj\Debug\MailVerteiler.csprojResolveAssemblyReference.cache
+c:\users\nicot_000\documents\visual studio 2015\Projects\MailVerteiler\MailVerteiler\obj\Debug\MailVerteiler.Form1.resources
+c:\users\nicot_000\documents\visual studio 2015\Projects\MailVerteiler\MailVerteiler\obj\Debug\MailVerteiler.Properties.Resources.resources
+c:\users\nicot_000\documents\visual studio 2015\Projects\MailVerteiler\MailVerteiler\obj\Debug\MailVerteiler.csproj.GenerateResource.Cache
+c:\users\nicot_000\documents\visual studio 2015\Projects\MailVerteiler\MailVerteiler\obj\Debug\MailVerteiler.exe
+c:\users\nicot_000\documents\visual studio 2015\Projects\MailVerteiler\MailVerteiler\obj\Debug\MailVerteiler.pdb
