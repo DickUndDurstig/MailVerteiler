@@ -1,5 +1,5 @@
-Name,Vorname,PLZ
-Faltermeier,Nico,97320
-Faltermeier,Alex,97320
-Appold,Dominik,97318
-Latzel,Georg,97320
+﻿Andrede,Name,Vorname,Anschrift,Ort,PLZ,Bundesland,Amt,email
+Herr,Faltermeier,Nico,Am Bahnhof 1 a,Buchbrunn,97320,Bayern,Mitglied,nicotin3@freenet.de
+Herr,Faltermeier,Alex,Am Bahnhof 1 a,Buchbrunn,97320,Bayern,Mitglied,asdf@asdf.de
+Herr,Appold,Dominik,Bla bla,Kitzingen,297318,Bayern,Mitglied,asdf@dff.de
+Herr,Latzel,Georg, Blu blu 4,Buchbrunn,97320,Bayern,Mitglied,ölk@df.de

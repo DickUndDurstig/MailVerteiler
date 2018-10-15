@@ -36,8 +36,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBoxFilter = new System.Windows.Forms.GroupBox();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
-            this.buttonDeleteFilter = new System.Windows.Forms.Button();
-            this.buttonAddFilter = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxFilter.SuspendLayout();
@@ -90,16 +88,19 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(12, 139);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(760, 410);
             this.dataGridView1.TabIndex = 1;
             // 
             // groupBoxFilter
             // 
-            this.groupBoxFilter.Controls.Add(this.buttonAddFilter);
-            this.groupBoxFilter.Controls.Add(this.buttonDeleteFilter);
             this.groupBoxFilter.Controls.Add(this.comboBoxFilter);
             this.groupBoxFilter.Location = new System.Drawing.Point(12, 88);
             this.groupBoxFilter.Name = "groupBoxFilter";
@@ -118,26 +119,6 @@
             this.comboBoxFilter.TabIndex = 0;
             this.comboBoxFilter.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilter_SelectedIndexChanged);
             // 
-            // buttonDeleteFilter
-            // 
-            this.buttonDeleteFilter.Location = new System.Drawing.Point(135, 20);
-            this.buttonDeleteFilter.Name = "buttonDeleteFilter";
-            this.buttonDeleteFilter.Size = new System.Drawing.Size(75, 23);
-            this.buttonDeleteFilter.TabIndex = 1;
-            this.buttonDeleteFilter.Text = "Lösche Filter";
-            this.buttonDeleteFilter.UseVisualStyleBackColor = true;
-            this.buttonDeleteFilter.Click += new System.EventHandler(this.buttonDeleteFilter_Click);
-            // 
-            // buttonAddFilter
-            // 
-            this.buttonAddFilter.Location = new System.Drawing.Point(216, 20);
-            this.buttonAddFilter.Name = "buttonAddFilter";
-            this.buttonAddFilter.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddFilter.TabIndex = 2;
-            this.buttonAddFilter.Text = "Füge neuen Filter hinzu";
-            this.buttonAddFilter.UseVisualStyleBackColor = true;
-            this.buttonAddFilter.Click += new System.EventHandler(this.buttonAddFilter_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,6 +130,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -168,8 +151,6 @@
         private System.Windows.Forms.ComboBox comboBoxFilter;
         private System.Windows.Forms.Label dataPath;
         private System.Windows.Forms.Label labelFilePath;
-        private System.Windows.Forms.Button buttonAddFilter;
-        private System.Windows.Forms.Button buttonDeleteFilter;
     }
 }
 

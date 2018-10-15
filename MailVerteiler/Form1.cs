@@ -22,6 +22,8 @@ namespace MailVerteiler
         {
             InitializeComponent();
 
+            //Properties.Settings.Default.Reset();
+
             InitFilter();
         }
 
@@ -44,7 +46,6 @@ namespace MailVerteiler
             //add default filters
             comboBoxFilter.Items.Add("");
             comboBoxFilter.Items.Add("97320");
-            comboBoxFilter.Items.Add(new ImageComboItem("Hallo", new Font("Verdana", 8), Color.Black, 0));
 
             extraFilters = (StringCollection)Properties.Settings.Default["filters"];
             if (extraFilters != null)
@@ -94,6 +95,36 @@ namespace MailVerteiler
 
         private void buttonAddFilter_Click(object sender, EventArgs e)
         {
+        }
+
+
+        //resize
+
+        private Size oldSize;
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            base.OnResize(e);
+            foreach (Control cnt in this.Controls)
+            {
+                ResizeAll(cnt, base.Size);
+            }
+            oldSize = base.Size;
+        }
+
+        private void ResizeAll(Control cnt, Size newSize)
+        {
+            int iWidth = newSize.Width - oldSize.Width;
+            cnt.Left += (cnt.Left * iWidth) / oldSize.Width;
+            cnt.Width += (cnt.Width * iWidth) / oldSize.Width;
+
+            int iHeight = newSize.Height - oldSize.Height;
+            cnt.Top += (cnt.Top * iHeight) / oldSize.Height;
+            cnt.Height += (cnt.Height * iHeight) / oldSize.Height;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            oldSize = base.Size;
         }
     }
 }
