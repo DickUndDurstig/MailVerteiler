@@ -56,6 +56,7 @@ namespace MailVerteiler
                 filteredUser = users.Where(x => x.PLZ.Equals(filter)).ToList<User>();
 
             gridView.DataSource = filteredUser;
+
         }
     }
 }

@@ -22,9 +22,12 @@ namespace MailVerteiler
         {
             InitializeComponent();
 
+            //TODO comment out
             //Properties.Settings.Default.Reset();
 
             InitFilter();
+
+            AddCheckboxToListView();
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -63,8 +66,19 @@ namespace MailVerteiler
 
             if (String.IsNullOrEmpty(filePath) == false)
             {
-                LoadFile();
+                LoadFile();               
             }
+        }
+
+        private void AddCheckboxToListView()
+        {
+            DataGridViewCheckBoxColumn checkColumn = new DataGridViewCheckBoxColumn();
+            checkColumn.Name = "";
+            checkColumn.HeaderText = "";
+            checkColumn.Width = 150;
+            checkColumn.ReadOnly = false;
+            checkColumn.FillWeight = 70; //if the datagridview is resized (on form resize) the checkbox won't take up too much; value is relative to the other columns' fill values
+            dataGridView1.Columns.Add(checkColumn);
         }
 
         private void LoadFile()
